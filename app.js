@@ -23,11 +23,13 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
-app.use('/graphql', graphqlHttp({
-    schema: graphQlSchema,
-    rootValue: graphQlResolvers,
-    graphiql: true
-}));
+app.use('/graphql', 
+    graphqlHttp({
+        schema: graphQlSchema,
+        rootValue: graphQlResolvers,
+        graphiql: true
+    })
+);
 
 mongoose.connect(
     `mongodb+srv://${process.env.MONGO_USER}:${
