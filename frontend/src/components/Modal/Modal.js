@@ -3,7 +3,7 @@ import './Modal.css';
 
 const Modal = props => {
     return (
-        <div className="modal">
+        <div className="modal fade-in">
             <header className="modal__header"><h1>{props.title}</h1></header>
             <section className="modal__content">
                 {props.children}
